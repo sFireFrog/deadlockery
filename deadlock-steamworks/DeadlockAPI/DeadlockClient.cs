@@ -178,6 +178,7 @@ namespace DeadlockAPI {
         public async Task<CMsgClientToGCFindHeroBuildsResponse?> FindHeroBuilds(Heroes hero) {
             var msg = new ClientGCMsgProtobuf<CMsgClientToGCFindHeroBuilds>((uint)EGCCitadelClientMessages.k_EMsgClientToGCFindHeroBuilds);
             msg.Body.hero_id = (uint)hero;
+            msg.Body.language = new List<int>() { 6};
             return await SendAndReceiveWithJob<CMsgClientToGCFindHeroBuilds, CMsgClientToGCFindHeroBuildsResponse>(msg);
         }
 

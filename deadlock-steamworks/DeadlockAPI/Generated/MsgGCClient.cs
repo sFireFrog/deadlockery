@@ -4295,7 +4295,7 @@ namespace ouwou.GC.Deadlock.Internal
         private uint? __pbn__hero_id;
 
         [global::ProtoBuf.ProtoMember(3)]
-        public global::System.Collections.Generic.List<int> language { get; } = new global::System.Collections.Generic.List<int>();
+        public global::System.Collections.Generic.List<int> language { get; set; } = new global::System.Collections.Generic.List<int>();
 
         [global::ProtoBuf.ProtoMember(4)]
         [global::System.ComponentModel.DefaultValue("")]
